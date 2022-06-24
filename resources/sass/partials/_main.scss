@@ -1,0 +1,22 @@
+.hero-banner {
+    background-image: url('./public/images/jumbotron.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+} 
+
+.current_series {
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+}
+}

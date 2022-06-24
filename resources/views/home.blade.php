@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
 @section('main_content')
-    <p>questo è il main</p>
+    <div class="hero-banner">
+        hero-banner img
+    </div>
+    @include('components.current_series')
 @endsection

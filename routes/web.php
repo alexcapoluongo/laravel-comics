@@ -14,7 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $currentSeriesArray = config('comics');
+    $currentSerie = [];
+
+    foreach($currentSeriesArray as $item) {
+        $currentSerie[] = $item;
+    }
+
     $data = [
+        'current_serie' => $currentSerie,
         'menu'=> [ 
             [
             'name'=> 'characters',
@@ -57,6 +65,8 @@ Route::get('/', function () {
             'link'=> 'shop',
             ],
         ],
+        
+
     ];
     return view('home', $data);
 });

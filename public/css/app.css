@@ -5,33 +5,48 @@ header {
   display: flex;
   justify-content: space-around;
 }
-
 header img {
   width: 60px;
   height: 60px;
   margin: auto 0;
 }
-
 header ul {
   display: flex;
   list-style: none;
   justify-content: center;
 }
-
 header ul li {
   line-height: 100px;
 }
-
 header ul li a {
   text-decoration: none;
   text-transform: uppercase;
   color: gray;
   padding: 0 20px;
 }
-
 header input {
   height: 20px;
   margin: auto 0;
+}
+
+.hero-banner {
+  background-image: url("./public/images/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
+.current_series ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.current_series ul li {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -39,4 +54,3 @@ header input {
   margin: 0;
   box-sizing: border-box;
 }
-
