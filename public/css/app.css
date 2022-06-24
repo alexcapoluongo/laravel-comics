@@ -83,6 +83,27 @@ header input {
   margin: 1em auto;
 }
 
+.second_menu {
+  height: 150px;
+  background-color: #0282f9;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.second_menu ul {
+  list-style: none;
+  display: flex;
+  line-height: 150px;
+}
+.second_menu ul li {
+  display: flex;
+}
+.second_menu ul li img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 * {
   padding: 0;
   margin: 0;

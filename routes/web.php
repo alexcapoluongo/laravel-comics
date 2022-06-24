@@ -65,6 +65,28 @@ Route::get('/', function () {
             'link'=> 'shop',
             ],
         ],
+        'second_menu' => [
+            [
+                'name'=>'digital comics',
+                'img'=> 'buy-comics-digital-comics.png'
+            ],
+            [
+                'name'=>'dc merchandise',
+                'img'=> 'buy-comics-merchandise.png'
+            ],
+            [
+                'name'=>'subscription',
+                'img'=> 'buy-comics-subscriptions.png'
+            ],
+            [
+                'name'=>'comic shop locator',
+                'img'=> 'buy-comics-shop-locator.png'
+            ],
+            [
+                'name'=>'dc power visa',
+                'img'=> 'buy-dc-power-visa.svg'
+            ]
+        ]
         
 
     ];
