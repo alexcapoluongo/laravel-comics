@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-   -header fisso
+   @include('partials.header')
    <main>
    @yield('main_content')
    </main>
-   -footer fisso
+   @include('partials.footer')
 </body>
 </html>
