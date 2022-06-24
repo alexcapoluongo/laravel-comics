@@ -1,4 +1,42 @@
-body {
-  background-color: aqua;
+header {
+  height: 100px;
+  width: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-around;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  margin: auto 0;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+header ul li {
+  line-height: 100px;
+}
+
+header ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: gray;
+  padding: 0 20px;
+}
+
+header input {
+  height: 20px;
+  margin: auto 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 

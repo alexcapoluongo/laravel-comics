@@ -14,5 +14,49 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'menu'=> [ 
+            [
+            'name'=> 'characters',
+            'link'=> 'characters',
+            ],
+            [
+            'name'=> 'comics',
+            'link'=> 'comics',
+            ],
+            [
+            'name'=> 'movies',
+            'link'=> 'movies',
+            ],
+            [
+            'name'=> 'tv',
+            'link'=> 'tv',
+            ],
+            [
+            'name'=> 'games',
+            'link'=> 'games',
+            ],
+            [
+            'name'=> 'collectibles',
+            'link'=> 'collectibles',
+            ],
+            [
+            'name'=> 'videos',
+            'link'=> 'videos',
+            ],
+            [
+            'name'=> 'fans',
+            'link'=> 'fans',
+            ],
+            [
+            'name'=> 'news',
+            'link'=> 'news',
+            ],
+            [
+            'name'=> 'shop',
+            'link'=> 'shop',
+            ],
+        ],
+    ];
+    return view('home', $data);
 });

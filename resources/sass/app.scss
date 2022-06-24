@@ -1,7 +1,11 @@
 //
 @import "partials/variables";
 @import "partials/general";
+@import "partials/header";
 
-body {
-    background-color:aqua;
+//reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
