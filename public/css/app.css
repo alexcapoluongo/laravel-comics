@@ -1,3 +1,8 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
 header {
   height: 100px;
   width: 100%;
@@ -45,8 +50,17 @@ header input {
 }
 .current_series ul li {
   border: 1px solid black;
-  display: flex;
-  flex-direction: column;
+  width: 16.6666666667%;
+  text-align: center;
+  padding: 10px;
+}
+.current_series ul li img {
+  width: 200px;
+  height: 200px;
+}
+.current_series ul li h3 {
+  word-break: break-all;
+  text-transform: uppercase;
 }
 
 * {
