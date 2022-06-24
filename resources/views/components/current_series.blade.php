@@ -9,5 +9,6 @@
             </li>
             @endforeach
         </ul>
+        <button>LOAD MORE</button>
     </div>
 </section>

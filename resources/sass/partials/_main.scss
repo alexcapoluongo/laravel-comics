@@ -1,14 +1,26 @@
 .hero-banner {
-    background-image: url('./public/images/jumbotron.jpg');
+    background-image: url('/images/jumbotron.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
-    height: 300px;
+    height: 500px;
     width: 100%;
 } 
 
 .current_series {
+    background-color: #1c1c1c;
+    color: white;
+    text-transform: uppercase;
+
+    h1 {
+        background-color:#0282f9;
+        display: inline;
+        padding: 10px;
+        margin-bottom: 2em;
+    }
+
     ul {
+        margin-top: 2em;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
@@ -20,14 +32,22 @@
             padding: 10px;
 
             img {
-                width: 200px;
-                height: 200px;
+                width: 100%;
+                height: 250px;
             }
 
             h3 {
                 word-break: break-all;
-                text-transform: uppercase;
             }
         }
-}
+    }
+    button {
+        background-color: #0282f9;
+        color: white;
+        font-size: 1em;
+        border: none;
+        padding: 1em 3em;
+        display: flex;
+        margin: 1em auto;
+    }
 }

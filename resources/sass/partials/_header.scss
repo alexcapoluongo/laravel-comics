@@ -1,7 +1,6 @@
 header {
     height: 100px;
     width: 100%;
-    background-color: antiquewhite;
     display: flex;
     justify-content: space-around;
 
@@ -20,6 +19,7 @@ header {
             line-height: 100px;
 
             a {
+                font-weight: bolder;
                 text-decoration: none;
                 text-transform: uppercase;
                 color: gray;
