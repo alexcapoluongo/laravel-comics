@@ -100,11 +100,73 @@ Route::get('/', function () use ($menu, $currentSerie) {
     return view('home', $data);
 });
 
-Route::get('/details', function() use ($menu, $currentSerie) {
+Route::get('/comics', function() use ($menu, $currentSerie) {
     $data = [
         'menu' => $menu,
         'current_serie'=> $currentSerie
     ];
-    return view('details', $data);
+    return view('comics', $data);
 });
 
+Route::get('/characters', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('characters', $data);
+});
+
+Route::get('/movies', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('movies', $data);
+});
+
+Route::get('/tv', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('tv', $data);
+});
+
+Route::get('/games', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('games', $data);
+});
+
+Route::get('/collectibles', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('collectibles', $data);
+});
+
+Route::get('/videos', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('videos', $data);
+});
+
+Route::get('/fans', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('fans', $data);
+});
+
+Route::get('/news', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('news', $data);
+});
+
+Route::get('/shop', function() use ($menu) {
+    $data = [
+        'menu' => $menu,
+    ];
+    return view('shop', $data);
+});
