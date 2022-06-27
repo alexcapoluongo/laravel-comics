@@ -4,6 +4,7 @@
         <li>
         @foreach ($menu as $item)
             <a href="{{ $item['link'] }}">
+            {{-- <a href="{{route('nomeroute')}}"></a> --}}
             {{ $item['name'] }}
             </a>
         @endforeach

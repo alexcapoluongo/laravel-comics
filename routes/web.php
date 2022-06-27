@@ -12,59 +12,60 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$menu = [ 
+    [
+    'name'=> 'characters',
+    'link'=> 'characters',
+    ],
+    [
+    'name'=> 'comics',
+    'link'=> 'comics',
+    ],
+    [
+    'name'=> 'movies',
+    'link'=> 'movies',
+    ],
+    [
+    'name'=> 'tv',
+    'link'=> 'tv',
+    ],
+    [
+    'name'=> 'games',
+    'link'=> 'games',
+    ],
+    [
+    'name'=> 'collectibles',
+    'link'=> 'collectibles',
+    ],
+    [
+    'name'=> 'videos',
+    'link'=> 'videos',
+    ],
+    [
+    'name'=> 'fans',
+    'link'=> 'fans',
+    ],
+    [
+    'name'=> 'news',
+    'link'=> 'news',
+    ],
+    [
+    'name'=> 'shop',
+    'link'=> 'shop',
+    ],
+];
 
-Route::get('/', function () {
+Route::get('/', function () use ($menu) {
+
     $currentSeriesArray = config('comics');
     $currentSerie = [];
-
     foreach($currentSeriesArray as $item) {
         $currentSerie[] = $item;
-    }
+    };
 
     $data = [
+        'menu' => $menu,
         'current_serie' => $currentSerie,
-        'menu'=> [ 
-            [
-            'name'=> 'characters',
-            'link'=> 'characters',
-            ],
-            [
-            'name'=> 'comics',
-            'link'=> 'comics',
-            ],
-            [
-            'name'=> 'movies',
-            'link'=> 'movies',
-            ],
-            [
-            'name'=> 'tv',
-            'link'=> 'tv',
-            ],
-            [
-            'name'=> 'games',
-            'link'=> 'games',
-            ],
-            [
-            'name'=> 'collectibles',
-            'link'=> 'collectibles',
-            ],
-            [
-            'name'=> 'videos',
-            'link'=> 'videos',
-            ],
-            [
-            'name'=> 'fans',
-            'link'=> 'fans',
-            ],
-            [
-            'name'=> 'news',
-            'link'=> 'news',
-            ],
-            [
-            'name'=> 'shop',
-            'link'=> 'shop',
-            ],
-        ],
         'second_menu' => [
             [
                 'name'=>'digital comics',
@@ -86,9 +87,16 @@ Route::get('/', function () {
                 'name'=>'dc power visa',
                 'img'=> 'buy-dc-power-visa.svg'
             ]
-        ]
-        
-
+        ],
     ];
+
     return view('home', $data);
 });
+
+Route::get('/details', function() use ($menu) {
+    $data = [
+        'menu' => $menu
+    ];
+    return view('details', $data);
+});
+
