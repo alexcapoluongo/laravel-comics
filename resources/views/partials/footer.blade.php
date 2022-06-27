@@ -4,9 +4,7 @@
             <div class="footer-lists">
                 <div class="col">
                     <ul>
-                        <li>
-                            <h3>prova</h3>
-                        </li>
+        
                         <li>Prova</li>
                         <li>Prova</li>
                         <li>Prova</li>
