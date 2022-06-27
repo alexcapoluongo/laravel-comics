@@ -46,6 +46,7 @@ header input {
 .current_series {
   background-color: #1c1c1c;
   color: white;
+  padding-bottom: 2em;
   text-transform: uppercase;
 }
 .current_series h1 {
@@ -73,6 +74,10 @@ header input {
 .current_series ul li h3 {
   word-break: break-all;
 }
+.current_series ul li a {
+  text-decoration: none;
+  color: white;
+}
 .current_series button {
   background-color: #0282f9;
   color: white;
@@ -84,7 +89,9 @@ header input {
 }
 
 .second_menu {
-  height: 150px;
+  height: 200px;
+  display: flex;
+  align-items: center;
   background-color: #0282f9;
   margin-top: 0;
   text-transform: uppercase;
@@ -94,50 +101,75 @@ header input {
   display: flex;
   line-height: 150px;
 }
-.second_menu ul li {
-  display: flex;
-}
 .second_menu ul li img {
   width: 80px;
   height: 80px;
   -o-object-fit: contain;
      object-fit: contain;
+  vertical-align: baseline;
 }
 
-h1 {
+.single_comics h1 {
   color: blue;
 }
-
-h2 {
+.single_comics h2 {
   color: red;
 }
-
-.green-box {
+.single_comics .green-box {
   background-color: green;
   color: white;
   display: flex;
   justify-content: space-between;
 }
-
-.details-box {
+.single_comics .details-box {
   background-color: lightgray;
 }
-.details-box .container {
+.single_comics .details-box .container {
   display: flex;
   justify-content: space-around;
 }
-.details-box .container .talent-col {
+.single_comics .details-box .container .talent-col {
   width: 50%;
 }
-.details-box .container h2 {
+.single_comics .details-box .container h2 {
   color: gray;
 }
-.details-box .container h3 {
+.single_comics .details-box .container h3 {
   color: gray;
 }
-.details-box .container a {
+.single_comics .details-box .container a {
   text-decoration: none;
   color: blue;
+}
+
+footer {
+  width: 100%;
+  color: white;
+}
+footer .footer_top {
+  background-image: url(../images/footer-bg.jpg);
+}
+footer .footer_top .footer-lists {
+  margin-bottom: 1em;
+  width: 50%;
+  display: flex;
+}
+footer .footer_top .footer-lists .col {
+  width: 33.3333333333%;
+}
+footer .footer_top .footer-lists .col ul {
+  border: 1px solid white;
+  list-style: none;
+}
+footer .footer_bottom {
+  margin-top: 1em;
+  background-color: gray;
+}
+footer .footer_bottom .container {
+  display: flex;
+}
+footer .footer_bottom .container ul {
+  list-style: none;
 }
 
 * {
