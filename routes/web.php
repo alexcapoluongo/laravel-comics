@@ -176,7 +176,8 @@ Route::get('/details{id}', function($id) use ($menu) {
     $current_comic = $comic->where('id', $id)->first();
 
     $data = [
-        'comic' => $current_comic
+        'comic' => $current_comic,
+        'menu'=> $menu
     ];
-    return view('single-comic', $data, $menu);
+    return view('single-comic', $data);
 })->name('single-comic');

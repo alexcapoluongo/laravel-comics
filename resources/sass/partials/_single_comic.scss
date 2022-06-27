@@ -1,0 +1,38 @@
+h1 {
+    color:blue;
+}
+h2 {
+    color: red;
+}
+
+.green-box {
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-box {
+    background-color: lightgray;
+    .container {
+        display: flex;
+        justify-content: space-around;
+
+        .talent-col {
+            width: 50%;
+        }
+
+        h2 {
+            color: gray;
+        }
+
+        h3 {
+            color: gray;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    }
+}

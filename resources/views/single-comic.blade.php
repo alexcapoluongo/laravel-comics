@@ -1,25 +1,49 @@
+@extends('layouts.app')
+@section('main_content')
+<div class="hero-banner"></div>
+<div class="container">
+    <img src="{{$comic['thumb']}}" alt="" srcset="">
 
-<h2>{{$comic['title']}}</h2>
-<p>{{$comic['price']}}</p>
-<p>available</p>
-<p>{{$comic['description']}}</p>
-<h2>talent</h2>
-<h3>art by:</h3>
+    <h1>{{$comic['title']}}</h1>
 
-@foreach ($comic['artists'] as $key=> $artist)
- {{$artist}},
-@endforeach
+    <div class="green-box">
+        <p>{{$comic['price']}}</p>
+        <h4>AVAILABLE</h4>
+        <p>Check Availability &darr;</p>
+        
+    </div>
 
-<h3>written by:</h3>
+    <p>{{$comic['description']}}</p>
+</div>
 
-@foreach ($comic['writers'] as $key=> $writer)
-{{$writer}},
-@endforeach
+    <div class="details-box">
+        <div class="container">
+            <div class="talent-col">
+                <h2>Talent</h2>
+                <span>Art by:</span>
+                @foreach ($comic['artists'] as $key=> $artist)
+                <a href="">{{$artist}}</a>,
+                @endforeach
+                <br>
 
-<h2>Specs</h2>
-<h3>series</h3>
-<p>{{$comic['series']}}</p>
-<h3>us price</h3>
-<p>{{$comic['price']}}</p>
-<h3>one sale date</h3>
-<p>{{$comic['sale_date']}}</p>
+                <span>Written by: </span>
+                @foreach ($comic['writers'] as $key=> $writer)
+                <a href="">{{$writer}}</a>,
+                @endforeach
+
+            </div>
+
+            <div class="specs-col">
+
+                <h2>Specs</h2>
+                <h3>series</h3>
+                <a href="">{{$comic['series']}}</a>
+                <h3>us price</h3>
+                <p>{{$comic['price']}}</p>
+                <h3>one sale date</h3>
+                <p>{{$comic['sale_date']}}</p>
+
+            </div>
+        </div>
+    </div>
+@endsection

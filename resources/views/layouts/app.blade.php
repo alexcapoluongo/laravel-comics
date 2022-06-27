@@ -12,6 +12,7 @@
    <main>
    @yield('main_content')
    @yield('details_content')
+
    </main>
    @include('partials.footer')
 </body>

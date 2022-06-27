@@ -104,6 +104,42 @@ header input {
      object-fit: contain;
 }
 
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: red;
+}
+
+.green-box {
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-box {
+  background-color: lightgray;
+}
+.details-box .container {
+  display: flex;
+  justify-content: space-around;
+}
+.details-box .container .talent-col {
+  width: 50%;
+}
+.details-box .container h2 {
+  color: gray;
+}
+.details-box .container h3 {
+  color: gray;
+}
+.details-box .container a {
+  text-decoration: none;
+  color: blue;
+}
+
 * {
   padding: 0;
   margin: 0;
