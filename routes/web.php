@@ -55,13 +55,20 @@ $menu = [
     ],
 ];
 
-Route::get('/', function () use ($menu) {
+$currentSeriesArray = config('comics');
+$currentSerie = [];
+foreach($currentSeriesArray as $item) {
+    $currentSerie[] = $item;
+};
 
-    $currentSeriesArray = config('comics');
-    $currentSerie = [];
-    foreach($currentSeriesArray as $item) {
-        $currentSerie[] = $item;
-    };
+
+Route::get('/', function () use ($menu, $currentSerie) {
+
+    // $currentSeriesArray = config('comics');
+    // $currentSerie = [];
+    // foreach($currentSeriesArray as $item) {
+    //     $currentSerie[] = $item;
+    // };
 
     $data = [
         'menu' => $menu,
@@ -93,9 +100,10 @@ Route::get('/', function () use ($menu) {
     return view('home', $data);
 });
 
-Route::get('/details', function() use ($menu) {
+Route::get('/details', function() use ($menu, $currentSerie) {
     $data = [
-        'menu' => $menu
+        'menu' => $menu,
+        'current_serie'=> $currentSerie
     ];
     return view('details', $data);
 });
