@@ -2,50 +2,15 @@
     <div class="footer_top">
         <div class="container">
             <div class="footer-lists">
-                <div class="col">
+                <div class="col">           
+                    @foreach ($footer as $key=>$value)
                     <ul>
-        
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
+                    <h3> {{$key}} </h3>
+                        @foreach ($value as $item)
+                            <li>  {{ $item['name'] }} </li>
+                        @endforeach
                     </ul>
-                    <ul>
-                        <li>
-                            <h3>prova</h3>
-                        </li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <ul>
-                        <li>
-                            <h3>prova</h3>
-                        </li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <ul>
-                        <li>
-                            <h3>prova</h3>
-                        </li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                        <li>Prova</li>
-                    </ul>
+                    @endforeach
                 </div>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsam fugit ratione labore aut maiores quasi eius eaque similique. Esse rem saepe nisi et laudantium dolore, optio cumque obcaecati velit!</p>
