@@ -170,3 +170,13 @@ Route::get('/shop', function() use ($menu) {
     ];
     return view('shop', $data);
 });
+
+Route::get('/details{id}', function($id) use ($menu) {
+    $comic = collect(config('comics'));
+    $current_comic = $comic->where('id', $id)->first();
+
+    $data = [
+        'comic' => $current_comic
+    ];
+    return view('single-comic', $data, $menu);
+})->name('single-comic');

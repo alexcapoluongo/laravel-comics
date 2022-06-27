@@ -3,10 +3,10 @@
         <h1>Current Series</h1>
         <ul>
             @foreach ($current_serie as $item)
-            <li>
+            <li><a href="details{{$item['id']}}">
                 <img src="{{ $item['thumb'] }}" alt="" srcset="">
                 <h3>{{ $item['series'] }}</h3>
-            </li>
+            </a></li>
             @endforeach
         </ul>
         <button>LOAD MORE</button>
